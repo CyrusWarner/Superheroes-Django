@@ -5,3 +5,15 @@ from .models import Superhero
 
 def index(request):
     return render(request, 'superheroesapp/index.html')
+
+
+def create_new_superhero(request):
+    pass
+
+
+def edit(request):
+    pass
+
+
+def delete(request):
+    pass

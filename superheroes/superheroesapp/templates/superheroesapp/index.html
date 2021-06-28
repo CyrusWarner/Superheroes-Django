@@ -8,6 +8,13 @@
     <title>Superheroes index</title>
 </head>
 <body>
-<h1>This is a template</h1>
+<form action="{%url 'superheroesapp:create_new_superhero' %}" method="post">
+    Name:<input type="text" name="name" id="name"><br>
+    alter ego name:<input type="text" name="alter ego name" id="alter_ego_name"><br>
+    primary superhero ability:<input type="text" name="primary superhero ability" id="primary_superhero_ability"><br>
+    secondary superhero ability:<input type="text" name="secondary superhero ability" id="secondary_superhero_ability"><br>
+    superhero catchphrase:<input type="text" name="superhero catchphrase" id="superhero_catchphrase"><br>
+    <input type="submit" value="Add new superhero.">
+</form>
 </body>
 </html>
