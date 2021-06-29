@@ -27,7 +27,7 @@
       <td>{{superhero_data.secondary_hero_ability}}</td>
       <td>{{superhero_data.superhero_catchphrase}}</td>
       <td><a href="{% url 'superheroesapp:superhero_edit' superhero_data.id %}">Edit</a> </td>
-      <td><a href="{url 'superheroesapp:delete_superhero' superhero_data.id %}">Delete</a> </td>
+      <td><a href="{%url 'superheroesapp:delete_superhero' superhero_data.id %}">Delete</a> </td>
     </tr>
   </table>
 

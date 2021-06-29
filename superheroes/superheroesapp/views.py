@@ -61,8 +61,10 @@ def update_superhero(request, superhero_id):
 
 
 def delete_superhero(request, superhero_id):
-    superhero_delete = Superhero.Objects.get(pk=superhero_id)
+    superhero_delete = Superhero.objects.get(pk=superhero_id)
+    superhero_delete.delete()
     context = {
         'superhero_delete': superhero_delete
     }
-    return render(request, "superheroesapp/edit.html", context)
+
+    return render(request, "superheroesapp/display.html", context)
