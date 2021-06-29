@@ -1,10 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Superhero Details</title>
 </head>
 <body>
+    <center>
+        <h1>Update Superhero information</h1>
+        <table>
+            <tr>
+                <td>Superhero Id</td>
+                <td><input type="text" name="id" Value="{{Superhero_update.id}}" readonly></td>
+            </tr>
+            <tr>
+                <td>Superhero Name</td>
+                <td><input type="text" name="superhero_name" Value="{{Superhero_update.superhero_name}}"></td>
+            </tr>
+            <tr>
+                <td>Superhero AlterEgo Name</td>
+                <td><input type="text" name="alter_ego_name" Value="{{Superhero_update.alter_ego_name}}"></td>
+            </tr>
+            <tr>
+                <td>Superhero Primary Ability</td>
+                <td><input type="text" name="primary_hero_ability" Value="{{Superhero_update.primary_hero_ability}}"></td>
+            </tr>
+            <tr>
+                <td>Superhero Secondary Ability</td>
+                <td><input type="text" name="secondary_hero_ability" Value="{{Superhero_update.secondary_hero_ability}}"></td>
+            </tr>
+            <tr>
+                <td>Superhero Catchphrase</td>
+                <td><input type="text" name="superhero_catchphrase" Value="{{Superhero_update.superhero_catchphrase}}"></td>
+            </tr>
+        </table>
+        <input type="submit" value="update"/>
+    </center>
 
 </body>
 </html>

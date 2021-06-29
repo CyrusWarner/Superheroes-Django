@@ -11,7 +11,7 @@
 <center>
   <table>
     <tr>
-      <th>Superhero id</th>
+      <th>Superhero Id</th>
       <th>Superhero Name</th>
       <th>AlterEgo Name</th>
       <th>Primary Hero Ability</th>
@@ -26,6 +26,7 @@
       <td>{{superhero_data.primary_hero_ability}}</td>
       <td>{{superhero_data.secondary_hero_ability}}</td>
       <td>{{superhero_data.superhero_catchphrase}}</td>
+      <td><a href="{% url 'superheroesapp:superhero_edit' superhero_data.id %}">Edit</a> </td>
     </tr>
   </table>
 
