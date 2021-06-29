@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import Superhero
+from .forms import superhero_forms
 
 # Create your views here.
 
@@ -46,10 +47,22 @@ def superhero_edit(request, superhero_id):
     }
     return render(request, "superheroesapp/edit.html", context)
 
+
 def update_superhero(request, superhero_id):
+    superhero_update = Superhero.objects.get(pk=superhero_id)
+    form = superhero_forms(request.POST, instance=superhero_update)
+    if form.is_valid():
+        form.save()
+        return redirect('/')
+    context = {
+        'form': form
+    }
+    return render(request, "superheroesapp/edit.html", context)
 
 
-
-
-def delete_superhero(request):
-    pass
+def delete_superhero(request, superhero_id):
+    superhero_delete = Superhero.Objects.get(pk=superhero_id)
+    context = {
+        'superhero_delete': superhero_delete
+    }
+    return render(request, "superheroesapp/edit.html", context)
