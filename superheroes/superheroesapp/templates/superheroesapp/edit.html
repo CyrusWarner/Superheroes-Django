@@ -13,33 +13,33 @@
         <h1>Update Superhero information</h1>
         <form  action="{%url 'superheroesapp:update_superhero' superhero_update.id %}" method="post">
             {% csrf_token %}
-        <table>
+        <table class="table table-borderless table-sm fs-4">
             <tr>
-                <td>Superhero Id</td>
-                <td><input type="text" name="id" Value="{{superhero_update.id}}" readonly></td>
+                <th scope="col">Superhero Id</th>
+                <td scope="row"><input class="form-control" type="text" name="id" Value="{{superhero_update.id}}" readonly disabled></td>
             </tr>
             <tr>
-                <td>Superhero Name</td>
-                <td><input type="text" name="superhero_name" Value="{{superhero_update.superhero_name}}"></td>
+                <th scope="col">Superhero Name</th>
+                <td scope="row"><input class="form-control" type="text" name="superhero_name" Value="{{superhero_update.superhero_name}}"></td>
             </tr>
             <tr>
-                <td>Superhero AlterEgo Name</td>
-                <td><input type="text" name="alter_ego_name" Value="{{superhero_update.alter_ego_name}}"></td>
+                <th scope="col">Superhero AlterEgo Name</th>
+                <td scope="row"><input class="form-control" type="text" name="alter_ego_name" Value="{{superhero_update.alter_ego_name}}"></td>
             </tr>
             <tr>
-                <td>Superhero Primary Ability</td>
-                <td><input type="text" name="primary_hero_ability" Value="{{superhero_update.primary_hero_ability}}"></td>
+                <th scope="col">Superhero Primary Ability</th>
+                <td scope="row"><input class="form-control" type="text" name="primary_hero_ability" Value="{{superhero_update.primary_hero_ability}}"></td>
             </tr>
             <tr>
-                <td>Superhero Secondary Ability</td>
-                <td><input type="text" name="secondary_hero_ability" Value="{{superhero_update.secondary_hero_ability}}"></td>
+                <th scope="col">Superhero Secondary Ability</th>
+                <td scope="row"><input class="form-control" type="text" name="secondary_hero_ability" Value="{{superhero_update.secondary_hero_ability}}"></td>
             </tr>
             <tr>
-                <td>Superhero Catchphrase</td>
-                <td><input type="text" name="superhero_catchphrase" Value="{{superhero_update.superhero_catchphrase}}"></td>
+                <th scope="col">Superhero Catchphrase</th>
+                <td scope="row"><input class="form-control" type="text" name="superhero_catchphrase" Value="{{superhero_update.superhero_catchphrase}}"></td>
             </tr>
         </table>
-        <input type="submit" value="update"/>
+        <input class="form-control fs-2" type="submit" value="update"/>
         </form>
     </center>
 
