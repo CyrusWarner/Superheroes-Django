@@ -66,5 +66,4 @@ def delete_superhero(request, superhero_id):
     context = {
         'superhero_delete': superhero_delete
     }
-
-    return render(request, "superheroesapp/display.html", context)
+    return redirect('/')
