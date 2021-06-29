@@ -11,7 +11,7 @@
 <h1>List of Superheroes</h1>
 <ul>
     {%for superhero in all_superheroes %}
-    <li><h2> {{superhero.superhero_name}} <a href="URL">Edit</a>  <a href="URL">Delete</a></h2></li>
+    <li><h2> {{superhero.superhero_name}} </h2></li> <a href="{% url 'superheroesapp:display_data' superhero.id %}">Superhero details</a>
     {% endfor %}
 </ul>
     <form action="{%url 'superheroesapp:create_new_superhero' %}" method="post">

@@ -16,6 +16,16 @@ def index(request):
     return render(request, 'superheroesapp/index.html', context)
 
 
+def display_data(request, superhero_id):
+    superhero_data = Superhero.objects.get(pk=superhero_id)
+    context = {
+        'superhero_data': superhero_data
+    }
+    return render(request, "superheroesapp/display.html", context)
+
+
+
+
 
 def superhero_detail(request):
     pass
@@ -36,8 +46,11 @@ def create_new_superhero(request):
         return render(request, 'superheroesapp/index.html')
 
 
-def edit(request):
-    pass
+def superhero_edit(request, pk):
+    display_superhero = Superhero.objects.get(id=id)
+    return render(request, "display.html", {"Superhero": display_superhero})
+
+
 
 
 def delete_superhero(request):
