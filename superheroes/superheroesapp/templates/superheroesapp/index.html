@@ -8,13 +8,20 @@
     <title>Superheroes index</title>
 </head>
 <body>
-<form action="{%url 'superheroesapp:create_new_superhero' %}" method="post">
-    Name:<input type="text" name="name" id="name"><br>
-    alter ego name:<input type="text" name="alter ego name" id="alter_ego_name"><br>
-    primary superhero ability:<input type="text" name="primary superhero ability" id="primary_superhero_ability"><br>
-    secondary superhero ability:<input type="text" name="secondary superhero ability" id="secondary_superhero_ability"><br>
-    superhero catchphrase:<input type="text" name="superhero catchphrase" id="superhero_catchphrase"><br>
-    <input type="submit" value="Add new superhero.">
-</form>
+<h1>List of Superheroes</h1>
+<ul>
+    {%for superhero in all_superheroes %}
+    <li><h2> {{superhero.superhero_name}} <a href="URL">Edit</a>  <a href="URL">Delete</a></h2></li>
+    {% endfor %}
+</ul>
+    <form action="{%url 'superheroesapp:create_new_superhero' %}" method="post">
+        {% csrf_token %}
+        Name:<input type="text" name="name" id="name"><br>
+        alter ego name:<input type="text" name="alter_ego" id="alter_ego"><br>
+        primary superhero ability:<input type="text" name="primary_superhero_ability" id="primary_superhero_ability"><br>
+        secondary superhero ability:<input type="text" name="secondary_superhero_ability" id="secondary_superhero_ability"><br>
+        superhero catchphrase:<input type="text" name="superhero_catchphrase" id="superhero_catchphrase"><br>
+        <input type="submit" value="Add new superhero.">
+    </form>
 </body>
 </html>
