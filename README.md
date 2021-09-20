@@ -15,6 +15,8 @@
 - Enable a user to remove a superhero
 - Enable a user to update a supehero
 
+---
+
 :heavy_check_mark: Finished adding functionality for adding a superhero
 
 :heavy_check_mark: Finished adding functionality for removing a superhero
