@@ -16,7 +16,6 @@
 - Enable a user to update a supehero
 
 ---
-
 ### Task List
 :heavy_check_mark: Finished adding functionality for adding a superhero
 
@@ -35,7 +34,8 @@ NOT DONE =  :x:
 WIP =       :recycle:
 BUGGED =    :warning:
  --->
-
+ 
+---
 ### Future Tasks  
 :x: Improve the UI/UX of the website
 
